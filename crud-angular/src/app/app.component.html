@@ -1,16 +1,38 @@
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
-</mat-toolbar>
+<mat-toolbar class="custom-toolbar">
 
+  <div class="menu-toggle-wrapper">
+    <button mat-icon-button (click)="toggleMenu()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <div class="menu" [class.open]="isOpen">
+      <ul>
+        <li><a href="/courses">Exemplo Crud 1 - Mongo DB</a></li>
+        <li><a href="#">Exemplo Crud 2 - Postgres</a></li>
+        <li><a href="#">Swagger</a></li>
+      </ul>
+    </div>
+    Menu
+  </div>
+
+  <span class="app-title">
+
+    <a href="/">Projeto Crud Angular</a>
+  </span>
+
+
+
+  <a href="https://github.com/JoaolimaDev" target="_blank" aria-label="GitHub" class="icon-link github-icon">
+    GitHub
+    <mat-icon>code</mat-icon>
+
+  </a>
+
+  <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-de-lima-74441b1b1/" target="_blank" class="icon-link linkedin-icon">
+    <mat-icon>group_add</mat-icon>
+    Linkedin
+  </a>
+
+
+</mat-toolbar>
 
 <router-outlet></router-outlet>

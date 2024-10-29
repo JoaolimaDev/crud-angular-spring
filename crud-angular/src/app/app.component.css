@@ -1,0 +1,16 @@
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.github-icon mat-icon {
+  color: #333;
+}
+
+.linkedin-icon mat-icon {
+  color: #0077b5;
+}
+
